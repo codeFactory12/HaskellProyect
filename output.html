@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/panda-syntax-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/solarized.css" id="theme">
+    <style>
+    section{
+        text-align: left;
+    }
+    h1{
+        text-align: center;
+    }
+    .image{
+        text-align: center;
+    }
+    a{
+        font-size: 30px;
+    }
+    p{
+        text-align: justify;
+    }
+    mark{
+        background-color: aqua;
+    }
+    th{
+        font-size: 30px;
+    }
+    .column{
+        flex: 1;
+        padding: 20px;
+    }
+    .split {
+    display: flex;
+    }
+    </style>
+    </head>
+<body>
+<div class = "reveal">
+ <div class = "slides">
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Tipos de datos soportados</h1>
+    <h2>Tipos de letra segun tamaño</h2>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <h2>Listas con punto </h2>
+    <li>Primer elemento</li>
+    <li>Segundo elemento</li>
+    <li>Tercer elemento</li>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Listas numeradas</h1>
+    <h2>Listas numeradas</h2>
+    <ol>
+    <li>primero</li>
+    <li>segundo</li>
+    <li>tercero</li>
+    <li>cuarto</li>
+    </ol>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Links</h1>
+    <h2>Imagenes</h2>
+    <div class = "image">
+<img src=https://res.cloudinary.com/dvsg7obzt/image/upload/v1701732050/ugjaspunfw4kirwgpq0p.png>
+</div>
+    <h2>Links</h2>
+    <a href=https://www.google.com>https://www.google.com</a>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Soporte de Codigo</h1>
+    <h2>Codigo Haskell</h2>
+    <pre><code class="haskell">    
+scanner :: Input -> [Token]
+scanner xs = scan xs 1 1
+    </code></pre>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Java</h1>
+    <h2>Codigo Java</h2>
+    <pre><code class="java">    
+package l2f.gameserver.model;
+
+public abstract strictfp class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log("Should not be called");
+    if (1 > 5) { // wtf!?
+      return;
+    }
+  }
+}
+    </code></pre>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>JavaScript</h1>
+    <h2>Codigo JavaScript</h2>
+    <pre><code class="JavaScript">    
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+
+  return (
+    <xmp>
+     <div>
+      <web-component>{block}</web-component>
+     </div>
+    </xmp>
+  )
+}
+    </code></pre>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Textos</h1>
+    <h3>Texto plano</h3>
+    <p>
+    El 
+<mark>arte de contar historias</mark>
+siempre ha sido una forma     
+<b>fascinante</b>
+de transmitir conocimientos y emociones desde los relatos épicos de     
+<i>antiguas civilizaciones</i>
+hasta las historias personales compartidas en la era digital las narrativas han desempeñado un papel central en la forma en que entendemos el mundo y nos relacionamos entre nosotros</p>
+<p>Las historias nos permiten explorar diferentes mundos y perspectivas ponernos en los zapatos de otros y experimentar emociones que quizás nunca habríamos sentido de otra manera A través de ellas podemos aprender lecciones valiosas inspirarnos e incluso encontrar consuelo en tiempos difíciles en resumen las historias son una parte fundamental de lo que significa ser humano    </p>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Negrilla y italic</h1>
+    <h3>Parrafo con negrilla</h3>
+    <p>
+    Este sera un parrafo con     
+<b>bold</b>
+    </p>
+    <h3>Parrafo con italic</h3>
+    <p>
+    Este sera un parrafo con     
+<i>italic</i>
+    </p>
+</div>
+<div class="column">
+    <h3>Parrafo unicamente con negrilla</h3>
+    <p>
+        
+<b>Todo esto deberia ser un texto bold</b>
+    </p>
+</div>
+<div class="column">
+    <h3>Parrafo unicamente con italic</h3>
+    <p>
+        
+<i>Todo esto deberia ser un texto italic</i>
+    </p>
+    <h3>Resaltador</h3>
+    <p>
+    
+<mark> Este texto deberia estar resaltado </mark>
+    </p>
+</div>
+</div>
+</section>
+<section>
+<div class = "split">
+<div class="column">
+    <h1>Tablas</h1>
+<table>
+<tr>
+<th>Nombre </th>
+<th>Edad </th>
+<th>Oficio</th>
+</tr>
+<tr>
+<th>Antonio </th>
+<th>20 </th>
+<th>Contador</th>
+</tr>
+<tr>
+<th>Lucho </th>
+<th>50 </th>
+<th>QA</th>
+</tr>
+<tr>
+<th>Malcolm </th>
+<th>22 </th>
+<th>Contador</th>
+</tr>
+<tr>
+<th>Lois </th>
+<th>25</th>
+<th>Dev</th>
+</tr>
+</table>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+<script> Reveal.initialize( {  width: 960,
+    height: 1200, slideNumber: 'c/t', transition: 'convex'});
+</script>
+</body>
+</hmtl>

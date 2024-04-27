@@ -1,0 +1,128 @@
+! Tipos de datos soportados
+{
+#Tipos de letra segun tamaño
+# H2
+## H3
+### h4
+#### h5
+##### h6
+#Listas con punto 
+###### Primer elemento
+###### Segundo elemento
+###### Tercer elemento
+}
+---
+! Listas numeradas
+{
+#Listas numeradas
+*$
+primero
+segundo
+tercero
+cuarto
+$*
+}
+---
+! Links
+{
+#Imagenes
+%https://res.cloudinary.com/dvsg7obzt/image/upload/v1701732050/ugjaspunfw4kirwgpq0p.png
+#Links
+%https://www.google.com
+; hola
+}
+---
+! Soporte de Codigo
+{
+#Codigo Haskell
+<&
+haskell
+scanner :: Input -> [Token]
+scanner xs = scan xs 1 1
+>&
+}
+---
+! Java
+{
+#Codigo Java
+<&
+java
+package l2f.gameserver.model;
+
+public abstract strictfp class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log("Should not be called");
+    if (1 > 5) { // wtf!?
+      return;
+    }
+  }
+}
+>&
+}
+---
+! JavaScript
+{
+# Codigo JavaScript
+<&
+JavaScript
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+
+  return (
+    <xmp>
+     <div>
+      <web-component>{block}</web-component>
+     </div>
+    </xmp>
+  )
+}
+>&
+}
+---
+! Textos
+{
+##Texto plano
+El _arte de contar historias_ siempre ha sido una forma ++fascinante++ de transmitir conocimientos y emociones desde los relatos épicos de +antiguas civilizaciones+ hasta las historias personales compartidas en la era digital las narrativas han desempeñado un papel central en la forma en que entendemos el mundo y nos relacionamos entre nosotros
+
+
+Las historias nos permiten explorar diferentes mundos y perspectivas ponernos en los zapatos de otros y experimentar emociones que quizás nunca habríamos sentido de otra manera A través de ellas podemos aprender lecciones valiosas inspirarnos e incluso encontrar consuelo en tiempos difíciles en resumen las historias son una parte fundamental de lo que significa ser humano
+}
+---
+! Negrilla y italic
+{
+## Parrafo con negrilla
+Este sera un parrafo con ++bold++
+## Parrafo con italic
+Este sera un parrafo con +italic+
+||
+## Parrafo unicamente con negrilla
+++Todo esto deberia ser un texto bold++
+||
+## Parrafo unicamente con italic
++Todo esto deberia ser un texto italic+
+## Resaltador
+_ Este texto deberia estar resaltado _
+}
+---
+! Tablas
+{
+| Nombre | Edad | Oficio|
+| Antonio | 20 |Contador|
+| Lucho | 50 | QA|
+| Malcolm | 22 | Contador|
+| Lois | 25| Dev|
+}
+---

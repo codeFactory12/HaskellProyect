@@ -1,0 +1,128 @@
+Slides ::= Slide
+
+Slide ::= BoldySlide '---'
+
+BoldySlide ::= Title? Body
+
+Title = '!' Space Paragraph
+
+Body ::= '{' MarckdownBlock '}'
+
+MarckdownBlock = Paragraph 
+               | Header 
+
+Paragraph = String { String }
+Header = "#" H1 [ "#" ]
+H1 = "#" H2 [ "#" ] | Paragraph
+H2 = "#" H3 [ "#" ] | Paragraph
+H3 = "#" H4 [ "#" ] | Paragraph
+H4 = "#" H5 [ "#" ] | Paragraph
+H5 = "#" H6 [ "#" ] | Paragraph
+H6 = Paragraph
+
+Bold => ++texto++
+
+Italic => +texto+
+
+highlight => _texto_
+
+Links => %
+
+Split slides => ||
+
+Jump another paragraph => \n\n
+
+point lists => ######
+
+numbered list => 
+*$
+lista
+$*
+
+codigo => 
+<& 
+lenguaje
+codigo
+&>
+
+tabla => 
+|primer|segundo|tercero|
+|cuarto|quinto|sexto|
+
+
+
+----------------------------------------------------
+AutoLink = "<" ( URL | EMAIL ) ">";
+Emphasize = Bold | Italic
+Bold = Asterik Asterik String Asterik Asterik |
+        Underscore Underscore String Underscore Underscore;
+Italic = Asterik String Asterik |
+            Underscore String Underscore;
+String = VisibleCharacter { VisibleCharacter } Newline;
+VisibleCharacter = Unicode | Others | Alphanum | Escaped |
+InlineWhitespace;
+Escaped = Backslash Special;
+Unicode = "&" Alphanum Alphanum Alphanum Alphanum ";";
+Alphanum = ( Alphabet | Digit );
+Alphabet = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" |
+            "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" |
+            "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" |
+            "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" |
+            "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" |
+            "y" | "z";
+Number = NonZeroDigit { Digit };
+NonZeroDigit = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+Digit = "0" | NonZeroDigit;
+Newline = "\n";
+InlineWhitespace = Tab | Space;
+Tab = "\t";
+Space = "\s";
+Whitespace = "\s" | "\t" | "\n" | "\r";
+Asterik = "*";
+Backslash = "\";
+Backtick = "`";
+Others = "@" | "$" | "%" | "^" | "&" | "?" | "'" | "," | ";" | ":";
+// the Special characters only need to be escaped in certain situations,
+// need to figure out how to describe this in the grammar.
+Special = "\" | "`" | "*" | "_" | "{" | "}" | "[" | "]" | "(" | ")" |
+            "#" | "+" | "-" | "." | "!";
+
+
+
+
+
+
+
+
+! Este es un titulo
+{
+# Hola
+
+asdasdasd 
+asdasdasdasd
+Spacedas
+das
+dasasd
+}
+
+--- 
+
+! Este es un titulo 2
+{
+# Hola
+
+}
+--- 
+
+
+
+
+
+
+
+
+
+
+
+
+
